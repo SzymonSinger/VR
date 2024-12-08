@@ -295,7 +295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSoundLevel: 100
   decayRate: 5
-  decayDelay: 5
+  decayDelay: 60
   currentSoundLevel: 0
 --- !u!65 &270264619
 BoxCollider:
@@ -3977,6 +3977,7 @@ GameObject:
   - component: {fileID: 774528362065710336}
   - component: {fileID: 4145669246810157078}
   - component: {fileID: 7819019184195595622}
+  - component: {fileID: 7819019184195595623}
   m_Layer: 0
   m_Name: Floor_Collider
   m_TagString: Untagged
@@ -4165,6 +4166,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7819019184195595623
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7369540362457913336}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 8.569059, y: 0.3538559, z: 8.569058}
+  m_Center: {x: 0.00000023841858, y: 0, z: 0}
 --- !u!33 &8103695659754685566
 MeshFilter:
   m_ObjectHideFlags: 0

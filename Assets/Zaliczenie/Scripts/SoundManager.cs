@@ -11,7 +11,9 @@ public class SoundManager : MonoBehaviour
 
     [Header("Sound Settings")]
     public float maxSoundLevel = 100f;
+    [Tooltip("How much sound level is removed per second")]
     public float decayRate = 5f;
+    [Tooltip("Time after sound level starts to decay (in seconds)")]
     public float decayDelay = 5f;
     public float currentSoundLevel = 0f;
 
