@@ -8,17 +8,17 @@ using UnityEngine.UI;
 public class SoundLevelUI : MonoBehaviour
 {
     private Slider soundSlider;
+    private SoundManager soundManager;
 
     private void Awake()
     {
+        soundManager = FindFirstObjectByType<SoundManager>();
         soundSlider = GetComponentInChildren<Slider>();
+        soundSlider.maxValue = soundManager.maxSoundLevel;
     }
 
     private void Update()
     {
-        if (SoundManager.Instance != null)
-        {
-            soundSlider.value = SoundManager.Instance.GetCurrentSoundLevel();
-        }
+        soundSlider.value = soundManager.currentSoundLevel;
     }
 }
