@@ -1362,7 +1362,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.0381578, y: 2.9770122, z: 0.20442317}
   m_Center: {x: 0.000000059604645, y: 4.2351647e-22, z: 0}
-<<<<<<< Updated upstream
 --- !u!1 &1346202723
 GameObject:
   m_ObjectHideFlags: 0
@@ -1469,8 +1468,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c519f5918190ff4f974bc40eaf798ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-=======
->>>>>>> Stashed changes
 --- !u!65 &1362092839
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5652,10 +5649,7 @@ SceneRoots:
   - {fileID: 6117498909699631654}
   - {fileID: 6037032300712202966}
   - {fileID: 775380238}
-<<<<<<< Updated upstream
   - {fileID: 2150158424960744350}
   - {fileID: 8636140220288443725}
-=======
   - {fileID: 30962017}
   - {fileID: 4275651501552293785}
->>>>>>> Stashed changes
