@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8246355162688051354}
   - component: {fileID: 4842117047757582287}
   - component: {fileID: 1545739374837687801}
+  - component: {fileID: 5902065867000004108}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -49,6 +50,7 @@ MonoBehaviour:
   decayRate: 5
   decayDelay: 5
   currentSoundLevel: 0
+  Dead: 0
 --- !u!114 &1545739374837687801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,3 +64,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetMaterial: {fileID: 2100000, guid: 382c19750c0ae074d9f3b9fed8ce1a69, type: 2}
+--- !u!114 &5902065867000004108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2663472140317975808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8d14870c716cc847abf5c1b22333c2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
