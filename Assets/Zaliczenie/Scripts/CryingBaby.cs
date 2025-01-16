@@ -11,12 +11,19 @@ public class CryingBaby : MonoBehaviour
     private bool happyBobo = false;
     public GameObject boboHeadphones;
     public GameObject targetHeadphones;
-
+    public AudioClip crying;
+    public AudioClip party;
+    public GameObject hint;
+    
     private SoundManager SM;
+    private Animator anim;
+    private AudioSource AS;
     // Start is called before the first frame update
     void Start()
     {
         SM = FindFirstObjectByType<SoundManager>();
+        anim = GetComponent<Animator>();
+        AS = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -31,6 +38,11 @@ public class CryingBaby : MonoBehaviour
         {
             Debug.Log("You Made Me Cry!");
             isCrying = true;
+            hint.SetActive(true);
+            AS.Stop();
+            AS.clip = crying;
+            AS.Play();
+            anim.SetBool("isCrying", true);
             StartCoroutine(Crying());
         }
         else
@@ -50,7 +62,11 @@ public class CryingBaby : MonoBehaviour
         }
         else
         {
-            Debug.Log("Okay, you can go!");
+            AS.Stop();
+            AS.clip = party;
+            AS.Play();
+            anim.SetBool("isCrying", false);
+            anim.SetBool("isHappy", true);
         }
     }
 

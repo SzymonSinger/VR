@@ -16,6 +16,7 @@ public class SoundManager : MonoBehaviour
     [Tooltip("Time after sound level starts to decay (in seconds)")]
     public float decayDelay = 5f;
     public float currentSoundLevel = 0f;
+    public bool Dead = false;
 
     private float decayTimer = 0f;
 
@@ -52,7 +53,7 @@ public class SoundManager : MonoBehaviour
 
     private void GameOver()
     {
-        Debug.Log($"Player Lost! Too Loud!");
+        Dead = true;
     }
 
     public void AddSound(float amount)

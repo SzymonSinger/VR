@@ -44,3 +44,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: UIOverlay
+    uniqueID: 1473951119
+    locked: 0
