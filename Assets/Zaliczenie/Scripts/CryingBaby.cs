@@ -8,7 +8,7 @@ using UnityEngine.Serialization;
 public class CryingBaby : MonoBehaviour
 {
     private bool isCrying = false;
-    private bool happyBobo = false;
+    public bool happyBobo = false;
     public GameObject boboHeadphones;
     public GameObject targetHeadphones;
     public AudioClip crying;
@@ -53,7 +53,7 @@ public class CryingBaby : MonoBehaviour
 
     private IEnumerator Crying()
     {
-        SM.AddSound(5);
+        SM.AddSound(10);
         Debug.Log("I'm gonna tell mom!");
         yield return new WaitForSeconds(2);
         if (!happyBobo)
@@ -72,11 +72,14 @@ public class CryingBaby : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Headphone"))
+        if (isCrying)
         {
-            boboHeadphones.SetActive(true);
-            happyBobo = true;
-            Destroy(targetHeadphones);
+            if (other.gameObject.CompareTag("Headphone"))
+            {
+                boboHeadphones.SetActive(true);
+                happyBobo = true;
+                Destroy(targetHeadphones);
+            }
         }
     }
 }

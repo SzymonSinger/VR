@@ -8,6 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Zaliczenie/Levels/Gameplay.unity
     guid: 3328b5e72986e91478de089937d5a45e
+  - enabled: 1
+    path: Assets/Zaliczenie/Levels/Rave.unity
+    guid: c5f29b18b278a7e46877eb6bea2a0142
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 398d945149746a94899cafbfeddf8c9f,
       type: 2}

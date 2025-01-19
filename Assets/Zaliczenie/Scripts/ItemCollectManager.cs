@@ -1,11 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.NetworkInformation;
 using TMPro;
 using UnityEngine;
 
 public class ItemCollectManager : MonoBehaviour {
     [SerializeField] GameObject doorHandle;
     public GameplayHandler gameplayHandler;
+    private CryingBaby cryingBaby;
 
     // A dictionary to hold which items are required
     // and whether they have been collected.
@@ -25,6 +28,15 @@ public class ItemCollectManager : MonoBehaviour {
 
     private void Start() {
         UpdateDoorText();
+        cryingBaby = FindFirstObjectByType<CryingBaby>();
+    }
+
+    private void Update()
+    {
+        if (cryingBaby.happyBobo)
+        {
+            AllItemsCollected();
+        }
     }
 
     public void CollectItem(GameObject collectedObject) {
@@ -99,7 +111,11 @@ public class ItemCollectManager : MonoBehaviour {
             if (!kvp.Value)
                 return false;
         }
-        doorHandle.SetActive(true);
+
+        if (cryingBaby.happyBobo)
+        {
+            doorHandle.SetActive(true);
+        }
         return true;
     }
 

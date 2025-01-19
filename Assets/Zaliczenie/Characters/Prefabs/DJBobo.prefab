@@ -1175,10 +1175,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c519f5918190ff4f974bc40eaf798ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  happyBobo: 0
   boboHeadphones: {fileID: 985330212003633414}
   targetHeadphones: {fileID: 0}
   crying: {fileID: 8300000, guid: db13f82eb4d555147856392bf257b0ac, type: 3}
   party: {fileID: 8300000, guid: 591fcd730dce18b48b74ff878a571c6e, type: 3}
+  hint: {fileID: 0}
 --- !u!136 &3441038206881061467
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1198,10 +1200,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.20357671
-  m_Height: 1.04
+  m_Radius: 0.12624967
+  m_Height: 0.8167442
   m_Direction: 1
-  m_Center: {x: 0.00000015232074, y: 0.26, z: 0.03}
+  m_Center: {x: 0.00000014901161, y: 0.3389737, z: -0.20030224}
 --- !u!4 &2028938821609807602 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a4660514aa60f774caced19b6615c213,

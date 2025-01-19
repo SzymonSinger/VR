@@ -20,6 +20,7 @@ public class GameplayHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Application.targetFrameRate = 90;
         SM = FindFirstObjectByType<SoundManager>();
     }
 
@@ -46,7 +47,7 @@ public class GameplayHandler : MonoBehaviour
         teleportation.SetActive(false);
         turning.SetActive(false);
         ScreenShowed = true;
-        StartCoroutine(Countdown(5));
+        StartCoroutine(Rave(5));
     }
 
     public IEnumerator Countdown(int seconds)
@@ -62,6 +63,21 @@ public class GameplayHandler : MonoBehaviour
         yield return new WaitForSeconds(1);
         seconds--;
         StartCoroutine(Countdown(seconds));
+    }
+
+    public IEnumerator Rave(int seconds)
+    {
+        if (seconds <= 0)
+        {
+            SceneManager.LoadScene(1);
+        }
+        //yield return
+        foreach (var TM in restartTexts) {
+            TM.text = $"Going to the rave in {seconds}";
+        } 
+        yield return new WaitForSeconds(1);
+        seconds--;
+        StartCoroutine(Rave(seconds));
     }
 
     public void RestartGame()
